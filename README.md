@@ -1,5 +1,8 @@
 # RecordAnimEUWSample
 ![image](https://user-images.githubusercontent.com/8957600/180386310-9328030a-abcb-4848-b8d0-c6ff3fa486d1.png)
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">以前にツイートした、自作アニメーション録画ツールをサンプルとしてGithubに公開しました！<a href="https://t.co/lZLCMN1jq3">https://t.co/lZLCMN1jq3</a><br><br>たぶん映像系のプロジェクトで役に立つ気がします。あと、EditorUtility機能を使ってSequencer作業を楽したい人にも参考になると思います。詳細はGithubのページで<a href="https://twitter.com/hashtag/UE5?src=hash&amp;ref_src=twsrc%5Etfw">#UE5</a> <a href="https://twitter.com/hashtag/UE5Study?src=hash&amp;ref_src=twsrc%5Etfw">#UE5Study</a> <a href="https://t.co/fhnf33ccDJ">https://t.co/fhnf33ccDJ</a> <a href="https://t.co/ANDIEyPMfX">pic.twitter.com/ANDIEyPMfX</a></p>&mdash; おかず (@pafuhana1213) <a href="https://twitter.com/pafuhana1213/status/1550395383146094593?ref_src=twsrc%5Etfw">July 22, 2022</a></blockquote> 
+
 UE標準のアニメーション録画機能であるAnimation Recorderを直接呼び出すことで、自分好みのアニメーション録画ツールを作るというサンプルです。
 
 Take Recorder、Sequence Recorderなどアニメーションを録画するためのツールが標準でありますが、プロジェクトにあった形にカスタムしたり自動化するにはエンジン改造が必要になり少しハードルが高いです。
