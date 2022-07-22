@@ -20,8 +20,20 @@ https://qiita.com/EGJ-Kaz_Okada/items/7f91099e72f64c6c6285
 4. 録画対象のActorにBinding Tag Nameと同じ名前のTagを設定する。  
 Binding Tagの設定方法：https://docs.unrealengine.com/5.0/ja/cinematic-tags-and-groups-in-unreal-engine/
 5. Output Folder Path に録画結果を出力するフォルダを、Output Asset Name Base にはアセット名を設定
+6. Recordボタンを押し、Sequencerの再生とアニメーション録画を開始
+7. 再生し終わると指定の場所に録画アニメーションアセットを保存
 
-記入中
+## 制限・注意
+サンプル内にあるLevelSequenceのように、単独のLevelSequenceかShotTrackを複数持つLevelSequenceのみを想定しています。そのため、ShotTrackではなくSubSceneTrackで分けている場合は正常に動作しません。もしSubSceneも考慮したい場合はEUWのCollect Shot Track Infosをカスタムしてください。
+
+複数のSkeletalMeshを同時に録画するのは試していませんが、多分うまくいきません。もし実現したい場合はCollect Record Targetをカスタムしてください
+
+## おまけ
+残念ながら、C++側で実装したUEditorUtilityWidgetの派生クラスはEditorUtilityWidgetアセットのClassSettingsの候補に出てきません。そのため、親クラスを自作のクラスに変えれません。こまった  
+![image](https://user-images.githubusercontent.com/8957600/180393828-5ae76ea8-13ee-4ea3-9e98-ab9fa66e181a.png)
+
+ただ、EditorUtility系で使えるReparent Blueprintノードを使えば無理やり親クラスを変更できます。EUB_ReparentEUWClassアセットを見てください。  
+![image](https://user-images.githubusercontent.com/8957600/180394293-c4efd1ec-56cd-4fa5-bec5-0629eda05cce.png)
 
 
 ## 動作環境
