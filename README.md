@@ -31,6 +31,9 @@ Binding Tagの設定方法：https://docs.unrealengine.com/5.0/ja/cinematic-tags
 
 複数のSkeletalMeshを同時に録画するのは試していませんが、多分うまくいきません。もし実現したい場合はCollect Record Targetをカスタムしてください
 
+ShotTrackごとに録画・出力を行うため、「複数のShotTrackがあっても録画結果は1アセットにしたい」ということはできません。もし実現したい場合は、Collect Shot Track Infosにおける録画時間の設定処理やCheck Finish Record周りをいじればできるはずです。たぶん
+
+
 ## おまけ
 残念ながら、C++側で実装したUEditorUtilityWidgetの派生クラスはEditorUtilityWidgetアセットのClassSettingsの候補に出てきません。そのため、親クラスを自作のクラスに変えれません。こまった  
 ![image](https://user-images.githubusercontent.com/8957600/180393828-5ae76ea8-13ee-4ea3-9e98-ab9fa66e181a.png)
